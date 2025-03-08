@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nursing Homes Information</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4464MG2S0J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4464MG2S0J');
+  </script>
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nursing Homes Info</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link preview-link" data-url="nursing_homes_US.html">Nursing Homes in the US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link preview-link" data-url="nursing_homes_VA.html">Nursing Homes in Virginia</a>
+          </li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-success">Average Nursing Home Ratings across US States</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a class="preview-link" data-url="Overall_Rating.html">Overall Rating</a>
+          </li>
+          <li class="list-group-item">
+            <a class="preview-link" data-url="QM_Rating.html">QM Rating</a>
+          </li>
+          <li class="list-group-item">
+            <a class="preview-link" data-url="Staffing_rating.html">Staffing Rating</a>
+          </li>
+          <li class="list-group-item">
+            <a class="preview-link" data-url="Staff_turnover.html">Staff Turnover</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for inline preview -->
+  <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="previewModalLabel">Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="iframe-container">
+            <iframe id="previewIframe" src="" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p class="mb-0">Contact: Thao Tran @ phuongthao317 [at] gmail . com</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Open linked pages in the modal iframe
+    document.querySelectorAll('.preview-link').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const url = this.getAttribute('data-url');
+        document.getElementById('previewIframe').setAttribute('src', url);
+        const modal = new bootstrap.Modal(document.getElementById('previewModal'));
+        modal.show();
+      });
+    });
+  </script>
+</body>
+</html>

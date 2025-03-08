@@ -18,42 +18,66 @@
     gtag('config', 'G-4464MG2S0J');
   </script>
   <style>
+    /* Body & Overall Background */
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #f8f9fa;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 0;
     }
-    .hero {
-      background: #fff;
-      padding: 4rem 1rem;
-      text-align: center;
+
+    /* Artistic Gradient Navbar */
+    .navbar-custom {
+      background: linear-gradient(45deg, #ffafbd, #ffc3a0);
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+
+    /* About Section */
+    #about {
+      padding: 4rem 0;
+    }
+
+    #about .col-md-4 img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    #about h1 {
+      font-size: 2rem;
       font-weight: 700;
+      margin-bottom: 1rem;
     }
-    .hero p {
-      color: #6c757d;
+
+    #about p {
       font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
+      line-height: 1.6;
     }
+
+    /* Section Titles */
     .section-title {
       margin-bottom: 2rem;
       font-weight: 600;
-      color: #198754; /* Bootstrap "success" color */
+      color: #d35400; /* A modern accent color */
     }
+
+    /* Projects Section */
     .project-card img {
       object-fit: cover;
       height: 150px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 1rem 0;
+      background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#hero">Thao Tran</a>
+      <a class="navbar-brand fw-bold" href="#about">Thao Tran</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -65,7 +89,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#skills">IT Skills</a>
+            <a class="nav-link" href="#about">About Me</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
@@ -78,31 +102,30 @@
     </div>
   </nav>
 
-  <!-- Hero / Intro -->
-  <section id="hero" class="hero">
+  <!-- About Me -->
+  <section id="about">
     <div class="container">
-      <h1>Thao (Julie) Tran</h1>
-      <p>
-        I’m a data analytics professional specializing in Python, SQL, 
-        and data science. Leveraging AI-assisted programming and advanced 
-        data visualization, I build practical solutions that bridge theory 
-        and real-world application. My passion lies in creating interactive 
-        dashboards, predictive models, and insightful analytics that 
-        empower data-driven decisions.
-      </p>
-    </div>
-  </section>
-
-  <!-- IT Skills Section -->
-  <section id="skills" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title">IT Skills</h2>
-      <ul class="list-unstyled">
-        <li><strong>Programming:</strong> Python (Pandas, Scikit-learn), C/C#, JavaScript, AI-assisted Programming</li>
-        <li><strong>Database Management:</strong> Oracle, MySQL, SQL Server</li>
-        <li><strong>Data Analytics:</strong> KNIME, Tableau, Power BI, Advanced Data Visualization, Statistical Analysis</li>
-        <li><strong>MS Office:</strong> Excel (Power Query, Pivot Tables), PowerPoint, Word</li>
-      </ul>
+      <div class="row align-items-center">
+        <!-- Placeholder Photo -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img
+            src="https://via.placeholder.com/300x300.png?text=Your+Photo"
+            alt="Placeholder"
+          >
+        </div>
+        <!-- Text on the right -->
+        <div class="col-md-8 text-start">
+          <h1>Thao (Julie) Tran</h1>
+          <p>
+            I’m a data analytics professional specializing in Python, SQL, 
+            and data science. Leveraging AI-assisted programming and advanced 
+            data visualization, I build practical solutions that bridge theory 
+            and real-world application. My passion lies in creating interactive 
+            dashboards, predictive models, and insightful analytics that 
+            empower data-driven decisions.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -123,7 +146,7 @@
               <h5 class="card-title">Investment Recommendation</h5>
               <p class="card-text">
                 Evaluated multiple investment options (buying vs. renting, money market, 
-                and S&P 500) using Palisade PrecisionTree for sensitivity and risk analysis.
+                and S&P 500) using Palisade PrecisionTree for risk and sensitivity analysis.
               </p>
             </div>
           </div>
@@ -140,7 +163,7 @@
               <h5 class="card-title">Lending Interest Rate Prediction</h5>
               <p class="card-text">
                 Leveraged KNIME to predict interest rates on LendingClub data, 
-                complemented by Tableau dashboards for deeper business insights.
+                with Tableau dashboards for deeper business insights.
               </p>
             </div>
           </div>
@@ -243,7 +266,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-white">
+  <section id="contact" class="py-5">
     <div class="container text-center">
       <h2 class="section-title">Contact</h2>
       <p class="mb-0">Email: phuongthao317@gmail.com</p>
@@ -252,10 +275,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-3 text-center">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Thao (Julie) Tran</p>
-    </div>
+  <footer class="text-center">
+    <p class="mb-0">&copy; 2025 Thao (Julie) Tran</p>
   </footer>
 
   <!-- Bootstrap 5 JS Bundle -->
